@@ -27,7 +27,7 @@ int main(){
            sum[i][j] = a[i][j] + b[i][j];
         }
     }
-    printf("Enter first matrix element:\n");
+    printf("sum of matrix element:\n");
     for(i=0; i < r; i++){
         for ( j = 0; j < c; j++)
         {
