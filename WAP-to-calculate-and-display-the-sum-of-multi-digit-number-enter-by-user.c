@@ -11,6 +11,6 @@ int main()
       sum = sum + remainder;
       t = t/ 10;
    }
-   printf("Sum of digits of %d = %d\n", n, sum);
+   printf("Sum of digits of %d = %d\n",n,sum);
    return 0;
 } 
