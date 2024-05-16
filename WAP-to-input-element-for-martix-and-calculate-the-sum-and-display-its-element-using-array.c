@@ -5,6 +5,7 @@ int main(){
     scanf("%d", &r);
     printf("Enter matrix colume:\n");
     scanf("%d", &c);
+ //puting the value in matrix element
     printf("Enter first matrix element:\n");
     for(i = 0; i < r; i++){
         for ( j = 0; j < c; j++)
@@ -21,12 +22,14 @@ int main(){
             scanf("%d",&b[i][j]);
         }
     }
+    // finding the sum of matrix element
     for(i = 0;i < r ; i++){
         for ( j = 0; j < c; j++)
         {
            sum[i][j] = a[i][j] + b[i][j];
         }
     }
+    //displaying the result
     printf("sum of matrix element:\n");
     for(i=0; i < r; i++){
         for ( j = 0; j < c; j++)
