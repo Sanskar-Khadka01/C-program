@@ -4,7 +4,7 @@
   C is a programming language designed by Dennis Ritchie at Bell Labs. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware.
 </p>
 <p>
-  <h1><b>Characteristics of C</b></h1>
+  <h2><b>Characteristics of C</b></h2>
   PCertainly! Here are some characteristics of the C programming language:
   
   1. **Procedural Language**: C is a procedural programming language, meaning it follows a linear approach to programming, executing commands in sequence.
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-  <h4>Basic structure of C</h4>
+  <h2><b>Basic structure of C</b></h2>
   
   1. **Preprocessor Directives**: These are lines that begin with a `#` symbol and are processed by the preprocessor before compilation. They're used to include header files or define macros.
   
