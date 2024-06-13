@@ -1,3 +1,4 @@
+//WAP to calculate and display the sum of multi digit number enter by user.
 #include <stdio.h>
 int main()
 {

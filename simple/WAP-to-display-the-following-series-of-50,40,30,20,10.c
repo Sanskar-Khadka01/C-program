@@ -1,3 +1,4 @@
+//WAP to display the following series of 50,40,30,20,10. 
 #include<stdio.h>
 int main(){
     int i,n=50;

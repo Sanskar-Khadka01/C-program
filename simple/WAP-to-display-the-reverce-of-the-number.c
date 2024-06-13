@@ -1,3 +1,4 @@
+//WAP to display the reverse of the number. 
 #include <stdio.h>
 int main() {
   int n, reverse = 0, remainder;

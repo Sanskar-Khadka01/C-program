@@ -1,3 +1,4 @@
+// WAP to calculate and display multiplication enter by user
 #include <stdio.h>
 int main() {
   int n;

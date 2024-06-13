@@ -1,5 +1,5 @@
+//WAP to check whether the student is pass or fail. 
 #include <stdio.h>
-
 int main() {
 int Per;
 	printf("Enter Per : ");

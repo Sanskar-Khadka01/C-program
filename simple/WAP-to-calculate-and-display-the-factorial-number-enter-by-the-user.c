@@ -1,3 +1,4 @@
+//WAP to calculate and display the factorial number enter by the user.
 #include <stdio.h>
 int main() {
     int n, i,fact = 1;
