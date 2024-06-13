@@ -1,3 +1,4 @@
+//WAP-to-display-the-smallest-number-among-10-number-using-array
 #include<stdio.h>
 int main(){
     int r, c, i, j, a[10][10], b[10][10], sum[10][10];

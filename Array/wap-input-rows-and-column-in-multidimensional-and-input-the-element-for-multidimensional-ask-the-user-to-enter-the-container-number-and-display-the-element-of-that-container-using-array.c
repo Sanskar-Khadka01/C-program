@@ -1,3 +1,4 @@
+//WAP-input-rows-and-column-in-multidimensional-and-input-the-element-for-multidimensional-ask-the-user-to-enter-the-container-number-and-display-the-element-of-that-container-using-array
 #include<stdio.h>
 int main(){
     //input row and column
