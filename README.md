@@ -1,4 +1,4 @@
-<h1 font-weight="bold" align="center" display="block"> <strong>Introduction to C Programming
+***Introduction to C Programming***
 </strong></h1>
 
 <p align="justify">
