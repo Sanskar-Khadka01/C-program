@@ -1,6 +1,6 @@
 <h1 align="center"> Introduction to C Programming</h1>
 <p align="justify">
-  <img src="C_Logo.png" alt="C Programming Language" width="150" align="right">
+<img src="C_Logo.png" alt="C Programming Language" width="150" align="right">
  C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems.It was created as a systems programming language to develop the UNIX operating system. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware. 
 </p>
 <p>
