@@ -1,5 +1,5 @@
 <h1 font-weight="bold" align="center" display="block"> <strong>Introduction to C Programming
-</strong>
+</strong></h1>
 
 <p align="justify">
   <img src="C_Logo.png" alt="C Programming Language" width="150" align="right">
