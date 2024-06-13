@@ -1,10 +1,10 @@
 <h1 align="center"> Introduction to C Programming</h1>
-
 <p align="justify">
   <img src="C_Logo.png" alt="C Programming Language" width="" align="right">
   C is a programming language designed by Dennis Ritchie at Bell Labs. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware.
 </p>
-  <h1><b>Characteristics of C</b></h1><p>
+<p>
+  <h1><b>Characteristics of C</b></h1>
   PCertainly! Here are some characteristics of the C programming language:
   
   1. **Procedural Language**: C is a procedural programming language, meaning it follows a linear approach to programming, executing commands in sequence.
@@ -27,7 +27,8 @@
   
   10. **Legacy and Popularity**: C has a rich history and remains widely used today, particularly in system programming, embedded systems, and software development where performance and control are critical.
   
-  11. **Close to Hardware**: C allows direct access to hardware components and system-level functionalities, making it suitable for tasks like device driver development and operating system programming.</p>
+  11. **Close to Hardware**: C allows direct access to hardware components and system-level functionalities, making it suitable for tasks like device driver development and operating system programming.
+</p>
 
 <p>
   <h4>Basic structure of C</h4>
