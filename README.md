@@ -103,9 +103,19 @@
       
       printf("The sum of %d and %d is: %d\n", num1, num2, sum);
       
-      return 0;
+      return 0;s
   }
-  ```
-  
   This structure provides a framework for writing C programs, allowing for organized, readable, and maintainable code.
+<h4><b>Token</b></h4>
+<h5><b>Keyword</b></h5>
+| Keyword   | Description                          |
+| --------- | ------------------------------------ |
+| `int`     | Defines an integer variable type.    |
+| `char`    | Defines a character variable type.   |
+| `if`      | Conditionally executes statements.   |
+| `else`    | Executes if the `if` condition is false. |
+| `for`     | Executes a block of statements repeatedly. |
+| `while`   | Loops through a block of code as long as a specified condition is true. |
+| `return`  | Exits from a function and optionally returns a value. 
+
 </p>
