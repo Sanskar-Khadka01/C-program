@@ -4,7 +4,8 @@
  C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems.It was created as a systems programming language to develop the UNIX operating system. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware. 
 </p>
 <p>
-  <h2><b>Characteristics of C</b></h2>
+
+  # **Characteristics of C**
   PCertainly! Here are some characteristics of the C programming language:
   
   1. **Procedural Language**: C is a procedural programming language, meaning it follows a linear approach to programming, executing commands in sequence.
@@ -23,14 +24,15 @@
   
   8. **Standard Library**: C comes with a standard library that provides various functions for tasks like input/output, string manipulation, memory allocation, and mathematical operations. These functions form the foundation of many C programs.
   
-  9. **No Built-in Support for Object-Oriented Programming (OOP)**: Unlike languages like C++, Java, or Python, C does not have built-in support for object-oriented programming. However, programmers can implement OOP principles manually using techniques like structures and function pointers.
-  
   10. **Legacy and Popularity**: C has a rich history and remains widely used today, particularly in system programming, embedded systems, and software development where performance and control are critical.
   
   11. **Close to Hardware**: C allows direct access to hardware components and system-level functionalities, making it suitable for tasks like device driver development and operating system programming.
+
 </p>
 
-  <h2><b>Basic structure of C</b></h2>
+<p>
+
+  **Basic structure of C**
   
   1. **Preprocessor Directives**: These are lines that begin with a `#` symbol and are processed by the preprocessor before compilation. They're used to include header files or define macros.
   
@@ -83,13 +85,16 @@
         comment */
      ```
   
-  7. **Return Statement**: The `return` statement is used to exit a function and optionally return a value to the calling function. In the `main()` function, it indicates the program's successful completion.
+  7. **Return Statement**: The `return` statement is used to exit a function and optionally return a value to the calling function. 
   
      Example:
      ```c
      return 0;
      ```
- ```c
+
+  Here's a simple example putting all these components together:
+  
+  ```c
   #include <stdio.h>
   
   int main() {
@@ -102,10 +107,15 @@
       return 0;s
   }
   ```
+</p>
+  <p>
+  <h1><b>Token</b></h1>
 
+## **keyword**: 
+The reserved word that has a predefined meaning and purpose within the language's syntax. Keywords are fundamental building blocks that define the structure and behavior of programs.
 
 | Keyword   | Description                          |
-| --------- | ------------------------------------ |
+| --------- | -------------- |
 | `int`     | Defines an integer variable type.    |
 | `char`    | Defines a character variable type.   |
 | `if`      | Conditionally executes statements.   |
@@ -113,3 +123,80 @@
 | `for`     | Executes a block of statements repeatedly. |
 | `while`   | Loops through a block of code as long as a specified condition is true. |
 | `return`  | Exits from a function and optionally returns a value. |
+
+## **Opreator**:
+The symbols that represent computations, operations, or manipulations of data. They are used to perform various operations on operands (variables or values). Operators in C can be classified into several types based on their functionality and usage. Here are the main types of operators in C:
+
+
+
+### 1. Arithmetic Operators
+Arithmetic operators perform basic mathematical operations on operands. They include:
+#### **Table**
+|perator name   |Symbols  |Description|
+|---------------|---------|----------|
+|Addition       |   `+`   | Adds two operands.|
+|Subtraction    |   `-`   |: Subtracts first operand by the second.|
+|Multiplication |   `*`   |: Multiplies two operands.|
+|Division       |   `/`   | Divides the first operand by the second.|
+|Modulus        |   `%`   | Computes the remainder of the division of two operands.|
+
+Example:
+```c
+int a = 10, b = 3;
+int sum = a + b;        // Addition
+int difference = a - b; // Subtraction
+int product = a * b;    // Multiplication
+int quotient = a / b;   // Division
+int remainder = a % b;  // Modulus
+```
+
+### 2. Relational Operators
+
+Relational operators compare the values of two operands and return a boolean result (`true` or `false`). They include:
+|Operator name            |Symbols|Description|
+|-------------------------|-------|----------|
+|Equal to                 |  `==` | two operands are equal.| 
+|Not equal to             |  `!=` | two operands are not equal.|
+|Greater than             |  `>`  | the left operand is greater than the right.|
+|Less than                |  `<`  | the left operand is less than the right.|
+|Greater than or equal to |  `>=` | the left operand is greater than or equal to the right.|
+|Less than or equal to    |  `<=`   | the left operand is less than or equal to the right.   |
+
+Example:
+```c
+int x = 10, y = 20;
+if (x == y) {
+    // Do something if x is equal to y
+}
+if (x != y) {
+    // Do something if x is not equal to y
+}
+if (x > y) {
+    // Do something if x is greater than y
+}
+// Similar for <, >=, and <=
+```
+
+### 3. Logical Operators
+
+Logical operators perform logical operations on boolean expressions (`true` or `false`). They include:
+|operator name|Symbol|Defination
+|-----|-----|------|
+|Logical AND |`&&`|Returns `true` if both operands are true.
+|Logical OR |`||`|Returns `true` if at least one operand is true.
+|Logical NOT |`!`|Returns `true` if the operand is false, and vice versa.
+
+Example:
+```c
+int a = 1, b = 0;
+if (a && b) {
+    // This condition is true only if both a and b are non-zero
+}
+if (a || b) {
+    // This condition is true if either a or b (or both) are non-zero
+}
+if (!b) {
+    // This condition is true because b is zero
+}
+```
+</p>
