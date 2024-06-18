@@ -109,14 +109,7 @@
 
 </p>
 <p><h4><b>Token</b></h4>
-| Keyword   | Description                          |
-| --------- | ------------------------------------ |
-| `int`     | Defines an integer variable type.    |
-| `char`    | Defines a character variable type.   |
-| `if`      | Conditionally executes statements.   |
-| `else`    | Executes if the `if` condition is false. |
-| `for`     | Executes a block of statements repeatedly. |
-| `while`   | Loops through a block of code as long as a specified condition is true. |
-| `return`  | Exits from a function and optionally returns a value. |
-
+taable
+|keywords| define |
+|---|---|
 </p>
