@@ -183,7 +183,7 @@ Logical operators perform logical operations on boolean expressions (`true` or `
 |operator name|Symbol|Defination
 |-----|-----|------|
 |Logical AND |`&&`|Returns `true` if both operands are true.
-|Logical OR |`||`|Returns `true` if at least one operand is true.
+|Logical OR | `\|\|` |Returns `true` if at least one operand is true.
 |Logical NOT |`!`|Returns `true` if the operand is false, and vice versa.
 
 Example:
