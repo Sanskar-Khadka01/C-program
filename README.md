@@ -30,7 +30,6 @@
   11. **Close to Hardware**: C allows direct access to hardware components and system-level functionalities, making it suitable for tasks like device driver development and operating system programming.
 </p>
 
-<p>
   <h2><b>Basic structure of C</b></h2>
   
   1. **Preprocessor Directives**: These are lines that begin with a `#` symbol and are processed by the preprocessor before compilation. They're used to include header files or define macros.
@@ -90,10 +89,7 @@
      ```c
      return 0;
      ```
-  
-  Here's a simple example putting all these components together:
-  
-  ```c
+ ```c
   #include <stdio.h>
   
   int main() {
@@ -105,11 +101,15 @@
       
       return 0;s
   }
-  This structure provides a framework for writing C programs, allowing for organized, readable, and maintainable code.
+  ```
 
-</p>
-<p><h4><b>Token</b></h4>
-taable
-|keywords| define |
-|---|---|
-</p>
+
+| Keyword   | Description                          |
+| --------- | ------------------------------------ |
+| `int`     | Defines an integer variable type.    |
+| `char`    | Defines a character variable type.   |
+| `if`      | Conditionally executes statements.   |
+| `else`    | Executes if the `if` condition is false. |
+| `for`     | Executes a block of statements repeatedly. |
+| `while`   | Loops through a block of code as long as a specified condition is true. |
+| `return`  | Exits from a function and optionally returns a value. |
