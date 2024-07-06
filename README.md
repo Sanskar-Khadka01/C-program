@@ -108,8 +108,8 @@
   }
   ```
 </p>
-  <p>
-  <h1><b>Token</b></h1>
+<p>
+<h1><b>Token</b></h1>
 
 ## **keyword**: 
 The reserved word that has a predefined meaning and purpose within the language's syntax. Keywords are fundamental building blocks that define the structure and behavior of programs.
@@ -180,7 +180,7 @@ if (x > y) {
 ### 3. Logical Operators
 
 Logical operators perform logical operations on boolean expressions (`true` or `false`). They include:
-|operator name|Symbol|Defination
+|operator name|Symbol|Definationshortcut keys in vs code for readme.md
 |-----|-----|------|
 |Logical AND |`&&`|Returns `true` if both operands are true.
 |Logical OR | `\|\|` |Returns `true` if at least one operand is true.
@@ -200,3 +200,97 @@ if (!b) {
 }
 ```
 </p>
+<p>
+
+## **Formatted Input/Output function** 
+
+A "formatted I/O function" in the context of C programming refers to a function that allows you to read or write data in a specified format. These functions enable you to format data according to specific requirements, such as displaying numbers with a certain number of decimal places or aligning text in a particular manner. They are part of the standard C library (`stdio.h`) and are essential for handling input and output operations in a structured way.
+
+
+1. **scanf**: 
+   - **Definition**: Reads formatted data from the standard input (usually the keyboard) based on the format specifier provided.
+   - **Syntax**: `int scanf(const char *format, ...);`
+
+2. **printf**: 
+   - **Definition**: Prints formatted data to the standard output (usually the console) according to the format specifier provided.
+   - **Syntax**:`int printf(const char *format, ...);`
+</p>
+<p>
+
+### Unformatted Input/Output Functions:
+Unformatted I/O functions, also known as binary I/O functions, are operations in programming languages that handle data in its raw form, without any formatting or interpretation. These functions are typically used when dealing with binary data or when precise byte-level manipulation is required. Here’s a detailed explanation focusing on C and C++:
+1. **`getchar`**
+   - **Definition**: Reads a single character from standard input (stdin).
+   - **Syntax**: `int getchar(void);`
+
+2. **`getch`**
+   - **Definition**: Reads a single character from the keyboard without echoing it to the screen. (Requires `conio.h` and is platform-specific to DOS/Windows.)
+   - **Syntax**: `int getch(void);`
+
+3. **`getche`**
+   - **Definition**: Reads a single character from the keyboard and echoes it to the screen. (Requires `conio.h` and is platform-specific to DOS/Windows.)
+   - **Syntax**: `int getche(void);`
+  
+4. **`gets`**
+   - **Definition**: Reads a string from standard input (stdin) until a newline character or end-of-file is encountered. (Deprecated and unsafe, use `fgets` instead.)
+   - **Syntax**: `char *gets(char *str);`
+
+
+1. **`putchar`**
+   - **Definition**: Writes a single character to standard output (stdout).
+   - **Syntax**: `int putchar(int char);`
+
+2. **`putch`**
+   - **Definition**: Writes a single character to the console. (Requires `conio.h` and is platform-specific to DOS/Windows.)
+   - **Syntax**: `int putch(int char);`
+
+3. **`puts`**
+   - **Definition**: Writes a string to standard output (stdout) followed by a newline character.
+   - **Syntax**: `int puts(const char *str);`
+
+
+</p>
+
+## **Type casting**
+
+Type casting in C is a mechanism used to convert a variable from one data type to another. It’s important for ensuring that operations are performed with the correct types and for avoiding unintended behavior or errors in computations. Here’s a concise overview of type casting in C:
+
+1. **Purpose of Type Casting**
+Type Compatibility: Ensure that operations between variables of different types are compatible.
+Precision Control: Adjust the precision of numeric calculations by converting between types.
+Memory Management: Manipulate data at a lower level by casting between pointer types.
+
+Type casting, also known as type conversion, is a fundamental concept in programming languages like C and C++. It involves converting a variable from one data type to another. Here are the key points about type casting:
+
+### Purpose of Type Casting:
+- **Compatibility**: Type casting allows variables to be converted into different data types to make them compatible with other operations or variables.
+- **Value Adjustment**: It can be used to adjust the value of a variable to fit within a different data type's range.
+- **Facilitate Operations**: It enables operations between variables of different types, such as arithmetic operations or comparisons.
+
+### Types of Type Casting:
+1. **Implicit Type Conversion (Coercion)**:
+   - **Automatic Conversion**: Automatically performed by the compiler when compatible data types are mixed in an expression.
+   - **Example**: Converting an `int` to a `float` in an arithmetic operation.
+
+2. **Explicit Type Conversion (Casting)**:
+   - **Manual Conversion**: Programmer explicitly specifies the type conversion.
+   - **Syntax**: `(type) expression`
+   - **Example**: `(float) num` converts `num` to a `float`.
+
+### Type Casting in C Example:
+```c
+int main() {
+    int num1 = 10;
+    int num2 = 3;
+    float result;
+
+    // Implicit conversion
+    result = num1 / num2;   // result will be 3.0 (integer division)
+
+    // Explicit conversion
+    result = (float) num1 / num2;   // result will be 3.3333 (floating-point division)
+
+    return 0;
+}
+```
+\
