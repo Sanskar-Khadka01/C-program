@@ -110,6 +110,37 @@
 </p>
 <p>
 <h1><b>Token</b></h1>
+In C programming, data types specify the type of data that variables can hold. Data types determine the size and layout of variables, the range of values that can be stored, and the operations that can be performed on them. Here are the main data types in C:
+
+### Primary Data Types:
+
+1. **Integer Types**:
+   - **`int`**: Basic integer type, typically 4 bytes in most modern systems.
+   - **`short int`**: Short integer, typically 2 bytes.
+   - **`long int`**: Long integer, often 4 bytes or more.
+   - **`long long int`**: Very long integer, introduced in C99, often 8 bytes.
+
+2. **Character Types**:
+   - **`char`**: Typically 1 byte, capable of holding a character in the system's character set (ASCII or Unicode).
+   - **`signed char`**: A `char` that can hold negative values as well.
+   - **`unsigned char`**: A `char` that can hold only non-negative values.
+
+3. **Floating-Point Types**:
+   - **`float`**: Single-precision floating-point type.
+   - **`double`**: Double-precision floating-point type, provides higher precision than `float`.
+   - **`long double`**: Extended-precision floating-point type, provides even higher precision than `double`.
+
+### Derived Data Types:
+
+1. **Arrays**:
+   - A collection of elements of the same type, accessed by an index.
+   - Example: `int arr[10];` defines an array of 10 integers.
+
+2. **Pointers**:
+   - Variables that store memory addresses.
+   - Example: `int *ptr;` declares a pointer to an integer.
+
+
 
 ## **keyword**: 
 The reserved word that has a predefined meaning and purpose within the language's syntax. Keywords are fundamental building blocks that define the structure and behavior of programs.
