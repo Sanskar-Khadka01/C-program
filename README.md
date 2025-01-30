@@ -112,6 +112,7 @@
 <h1><b>Token</b></h1>
 In C programming, data types specify the type of data that variables can hold. Data types determine the size and layout of variables, the range of values that can be stored, and the operations that can be performed on them. Here are the main data types in C:
 
+
 ### Primary Data Types:
 
 1. **Integer Types**:
@@ -154,6 +155,41 @@ The reserved word that has a predefined meaning and purpose within the language'
 | `for`     | Executes a block of statements repeatedly. |
 | `while`   | Loops through a block of code as long as a specified condition is true. |
 | `return`  | Exits from a function and optionally returns a value. |
+## **Specifier**:
+1. Format Specifiers
+Format specifiers are used in functions like printf and scanf to define how data should be formatted or interpreted. They are placeholders within a string that indicate what type of data is expected or how it should be presented.
+
+| Specifier | Description                   | 
+|------------|-------------------------------|
+| `%d`       | Integer                       |    
+| `%f`       | Floating-point number         | 
+| `%c`       | Character                     | 
+| `%s`       | String                        | 
+| `%x`       | Hexadecimal integer           | 
+| `%p`       | Pointer address               |
+
+Example
+~~~c
+int num = 42;
+printf("The number is %d\n", num);  // Uses %d to format an integer
+~~~
+2. Type Specifiers
+Type specifiers in C are keywords used to declare variables, functions, and other entities to specify their data types. They determine the kind of data a variable can hold or the type of a function's return value.
+
+| Type Specifier | Defination|
+|------------|-------------------------------|
+`int`| Specifies integer data type|
+|`float` |Specifies floating-point data type|
+|`double`|Specifies double-precision floating-point data type|
+|`char` |Specifies character data type|
+|`void` |Specifies no data type (used for functions that do not return a value)|
+
+Exmple 
+~~~ c
+int age;           // 'int' specifies that 'age' is an integer variable
+float height;      // 'float' specifies that 'height' is a floating-point variable
+void function();   // 'void' specifies that 'function' does not return a value
+~~~
 
 ## **Opreator**:
 The symbols that represent computations, operations, or manipulations of data. They are used to perform various operations on operands (variables or values). Operators in C can be classified into several types based on their functionality and usage. Here are the main types of operators in C:
@@ -286,13 +322,6 @@ Unformatted I/O functions, also known as binary I/O functions, are operations in
 
 Type casting in C is a mechanism used to convert a variable from one data type to another. It’s important for ensuring that operations are performed with the correct types and for avoiding unintended behavior or errors in computations. Here’s a concise overview of type casting in C:
 
-1. **Purpose of Type Casting**
-Type Compatibility: Ensure that operations between variables of different types are compatible.
-Precision Control: Adjust the precision of numeric calculations by converting between types.
-Memory Management: Manipulate data at a lower level by casting between pointer types.
-
-Type casting, also known as type conversion, is a fundamental concept in programming languages like C and C++. It involves converting a variable from one data type to another. Here are the key points about type casting:
-
 ### Purpose of Type Casting:
 - **Compatibility**: Type casting allows variables to be converted into different data types to make them compatible with other operations or variables.
 - **Value Adjustment**: It can be used to adjust the value of a variable to fit within a different data type's range.
@@ -324,4 +353,3 @@ int main() {
     return 0;
 }
 ```
-\

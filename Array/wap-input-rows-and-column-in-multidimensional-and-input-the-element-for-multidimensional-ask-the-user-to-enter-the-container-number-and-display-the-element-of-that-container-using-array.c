@@ -16,7 +16,7 @@ int r, c;
    scanf("%d", &a[i][j]);
   }
  }
-//ask containerrow and container column
+//ask container row and container column
  int cR, cC;
  printf("Enter container row:(from 0 to %d); ",r-1); 
  scanf("%d",&cR);
