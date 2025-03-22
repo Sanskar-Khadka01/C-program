@@ -3,10 +3,9 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Programming Language" width="150" align="right">
  C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems.It was created as a systems programming language to develop the UNIX operating system. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware. 
 </p>
-<p>
-
-  # **Characteristics of C**
-  PCertainly! Here are some characteristics of the C programming language:
+ 
+# **Characteristics of C**
+PCertainly! Here are some characteristics of the C programming language:
   
   1. **Procedural Language**: C is a procedural programming language, meaning it follows a linear approach to programming, executing commands in sequence.
   
@@ -28,11 +27,10 @@
   
   11. **Close to Hardware**: C allows direct access to hardware components and system-level functionalities, making it suitable for tasks like device driver development and operating system programming.
 
-</p>
 
-<p>
 
-  **Basic structure of C**
+
+# **Basic structure of C** #
   
   1. **Preprocessor Directives**: These are lines that begin with a `#` symbol and are processed by the preprocessor before compilation. They're used to include header files or define macros.
   
@@ -107,31 +105,34 @@
       return 0;s
   }
   ```
-</p>
-<p>
-<h1><b>Token</b></h1>
+
+
+
+# **Identifier**
+Identifier can be defined as the name of the variables, function, arrays, structure etc created by programmer they are the fundamental requiremant of any language . The identifiers are defined according to following rules:-
+- Identifiers consists letters and digits.
+- First characters must be alphabate or underscore.
+- Upper case and lower case are allowed nut not same ,i.e.Text not same text
+
+# **Token** #
 In C programming, data types specify the type of data that variables can hold. Data types determine the size and layout of variables, the range of values that can be stored, and the operations that can be performed on them. Here are the main data types in C:
 
+# Datatype 
+It is the set of key word to declare aset of veriables.A set of data that specifies the possible range of the values in a program and stored in memory are called datatype.Data types are used to defined veriables before use it. 
 
-### Primary Data Types:
+### 1. Primary Data Types:
+| data type      | Type                         |Memory Require|
+|----------------|------------------------------|--------------|
+| `int`            | integer                      |1 Byte        |
+| `float`          | char acter                    |4/2 Byte      |
+| `char`           | floating point number        |4 Byte        |
+| `long`           | floting number               |4 Byte        |
+| `double`         | large floating number        |8 Byte        |
+| `long double`    | very large floating number   |12 Byte       |
 
-1. **Integer Types**:
-   - **`int`**: Basic integer type, typically 4 bytes in most modern systems.
-   - **`short int`**: Short integer, typically 2 bytes.
-   - **`long int`**: Long integer, often 4 bytes or more.
-   - **`long long int`**: Very long integer, introduced in C99, often 8 bytes.
 
-2. **Character Types**:
-   - **`char`**: Typically 1 byte, capable of holding a character in the system's character set (ASCII or Unicode).
-   - **`signed char`**: A `char` that can hold negative values as well.
-   - **`unsigned char`**: A `char` that can hold only non-negative values.
 
-3. **Floating-Point Types**:
-   - **`float`**: Single-precision floating-point type.
-   - **`double`**: Double-precision floating-point type, provides higher precision than `float`.
-   - **`long double`**: Extended-precision floating-point type, provides even higher precision than `double`.
-
-### Derived Data Types:
+### 2. Secondary  Data Types:
 
 1. **Arrays**:
    - A collection of elements of the same type, accessed by an index.
@@ -155,8 +156,20 @@ The reserved word that has a predefined meaning and purpose within the language'
 | `for`     | Executes a block of statements repeatedly. |
 | `while`   | Loops through a block of code as long as a specified condition is true. |
 | `return`  | Exits from a function and optionally returns a value. |
+
+## **Variables**
+variables are simply name that changes the values whike executing a program . It allocates memory space inside a memory of computer. A variable can have only one valu assigned to it every time of execution of the program. It's value in diffrent execution.
+
+- **Rules of varibles**
+   - They musst always begin with a letter , although some permit underscore as the first character.
+   - White space is not allowed.
+   - Avariables should not be keywords.
+### **Types of variables**
+   1. **Numeric variable**  
+
 ## **Specifier**:
-1. Format Specifiers
+
+### **1. Format Specifiers**
 Format specifiers are used in functions like printf and scanf to define how data should be formatted or interpreted. They are placeholders within a string that indicate what type of data is expected or how it should be presented.
 
 | Specifier | Description                   | 
@@ -173,7 +186,8 @@ Example
 int num = 42;
 printf("The number is %d\n", num);  // Uses %d to format an integer
 ~~~
-2. Type Specifiers
+
+### **2. Type Specifiers**
 Type specifiers in C are keywords used to declare variables, functions, and other entities to specify their data types. They determine the kind of data a variable can hold or the type of a function's return value.
 
 | Type Specifier | Defination|
@@ -269,6 +283,10 @@ if (!b) {
 </p>
 <p>
 
+**Variable**
+
+
+
 ## **Formatted Input/Output function** 
 
 A "formatted I/O function" in the context of C programming refers to a function that allows you to read or write data in a specified format. These functions enable you to format data according to specific requirements, such as displaying numbers with a certain number of decimal places or aligning text in a particular manner. They are part of the standard C library (`stdio.h`) and are essential for handling input and output operations in a structured way.
@@ -316,8 +334,6 @@ Unformatted I/O functions, also known as binary I/O functions, are operations in
    - **Syntax**: `int puts(const char *str);`
 
 
-</p>
-
 ## **Type casting**
 
 Type casting in C is a mechanism used to convert a variable from one data type to another. It’s important for ensuring that operations are performed with the correct types and for avoiding unintended behavior or errors in computations. Here’s a concise overview of type casting in C:
@@ -353,3 +369,4 @@ int main() {
     return 0;
 }
 ```
+

@@ -1,13 +1,11 @@
 //WAP-input-rows-and-column-in-multidimensional-and-input-the-element-for-multidimensional-ask-the-user-to-enter-the-container-number-and-display-the-element-of-that-container-using-array
 #include<stdio.h>
 int main(){
-    //input row and column
 int r, c;
  printf("Enter row:");
  scanf("%d",&r);
  printf("Enter column:");
  scanf("%d",&c);
- //input element
  int i, j, a[r][c]; 
  printf("Enter matrix elements:\n");
  for(i=0;i< r;i++){
@@ -16,7 +14,6 @@ int r, c;
    scanf("%d", &a[i][j]);
   }
  }
-//ask container row and container column
  int cR, cC;
  printf("Enter container row:(from 0 to %d); ",r-1); 
  scanf("%d",&cR);
