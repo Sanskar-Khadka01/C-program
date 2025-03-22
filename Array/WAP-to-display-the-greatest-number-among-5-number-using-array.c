@@ -1,4 +1,4 @@
-//WAP-to-arrange-5-number-in-decending-order-using-array
+//WAP-to-display-the-greatest-number-among-5-number-using-array
 #include <stdio.h>
 int main() {
   int i ,arr[5],great;

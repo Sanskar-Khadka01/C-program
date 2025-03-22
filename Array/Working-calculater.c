@@ -56,8 +56,9 @@ int main(){
                 scanf("%c",&operator);
                 printf("Enter second number ");
                 scanf(" %f",&n2);   
-            } else{
+             } else{
                 displayResults(results,count);
+            
             }
         }
 
