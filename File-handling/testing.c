@@ -40,7 +40,7 @@ int main()
         while(fscanf(fp, "%d %s %f",
               &s[n].id,
               s[n].name,
-              &s[n].marks) != EOF)
+              &s[n].marks) == 3)
         {
             n++;
         }
@@ -107,7 +107,8 @@ void addStudent()
 
     // READ EXISTING DATA
     fp = fopen("students.txt", "r");
-    if(fp!=NULL){
+    if(fp==NULL)
+    {
         fp = fopen("students.txt", "w");
         fclose(fp);
         fp = fopen("students.txt", "r");
