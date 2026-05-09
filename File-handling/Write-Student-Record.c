@@ -8,6 +8,7 @@ struct Student {
 };
 
 int main() {
+    int n, i; 
     FILE *fp = fopen("students.txt", "w");
     printf("Enter number of student to store");
     scanf("%d",&n);
