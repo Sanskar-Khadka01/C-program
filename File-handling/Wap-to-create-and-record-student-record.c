@@ -11,7 +11,10 @@ int main() {
     int n,i;
     printf("Enter number of student to store");
     scanf("%d",&n);
+    printf("");
     struct Student s[n];
+   fprintf(fp, "Roll\t\tName\t\tMarks\n");
+    fprintf(fp, "---------------------------------\n");
     for(i= 0 ; i< n; i++){
        printf("Enter student id : ");
        scanf("%d",&s[i].id);
