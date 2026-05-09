@@ -67,8 +67,13 @@ int main()
         printf("5. Exit\n");
 
         printf("Enter choice: ");
-        scanf("%d", &choice);
 
+       if(scanf("%d", &choice) != 1)
+       {
+          printf("Invalid input\n");
+          while(getchar() != '\n');
+          continue;
+       }
         switch(choice)
         {
             case 1: addStudent(); break;
