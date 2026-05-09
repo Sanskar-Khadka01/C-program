@@ -6,55 +6,305 @@ struct Student {
     char name[100];
     float marks;
 };
+int main()
+{
+    FILE *fp;
+    struct Student s[200];
+    int n = 0;
 
-int main() {
+    // STEP 1: TRY OPEN FILE
+    fp = fopen("students.txt", "r");
 
+    if(fp == NULL)
+    {
+        // FILE NOT EXISTS → CREATE IT
+        fp = fopen("students.txt", "w");
+        fclose(fp);
 
-    int n, i, j ;
+        printf("File created successfully.\n");
 
-    printf("Enter number of students to store: ");
-    scanf("%d", &n);
+        printf("No students found. Please add students first.\n");
+        addStudent();   // first entry
+    }
+    else
+    {
+        // FILE EXISTS → READ DATA
+        while(fscanf(fp, "%d %s %f",
+              &s[n].id,
+              s[n].name,
+              &s[n].marks) != EOF)
+        {
+            n++;
+        }
+        fclose(fp);
 
-    struct Student s[n],temp;
+        // STEP 2: CHECK EMPTY FILE
+        if(n == 0)
+        {
+            printf("File is empty. Add students first.\n");
+            addStudent();
+        }
+    }
 
-    
-    for(i = 0; i < n; i++) {
+    // STEP 3: GO TO MENU
+    int choice;
 
-        printf("Enter student id: ");
-        scanf("%d", &s[i].id);
+    while(1)
+    {
+        printf("\n===== MENU =====\n");
+        printf("1. Add Student\n");
+        printf("2. Display Students\n");
+        printf("3. Update Student\n");
+        printf("4. Delete Student\n");
+        printf("5. Exit\n");
 
-        printf("Enter student name: ");
-        scanf("%s", s[i].name);
+        printf("Enter choice: ");
+        scanf("%d", &choice);
 
-        printf("Enter student marks: ");
-        scanf("%f", &s[i].marks);   // FIXED
+        switch(choice)
+        {
+            case 1: addStudent(); break;
+            case 2: displayStudent(); break;
+            case 3: updateStudent(); break;
+            case 4: deleteByName(); break;
+            case 5: return 0;
+            default: printf("Invalid choice\n");
+        }
+    }
 }
-    // SORT BY NAME (A-Z)
-    for(int i = 0; i < n - 1; i++) {
-        for(int j = i + 1; j < n; j++) {
 
-            if(strcmp(s[i].name, s[j].name) > 0) {
+void sortStudents(struct Student s[], int n)
+{
+    struct Student temp;
+
+    for(int i = 0; i < n - 1; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            if(strcmp(s[i].name, s[j].name) > 0)
+            {
                 temp = s[i];
                 s[i] = s[j];
                 s[j] = temp;
             }
         }
-    } 
-    // OPEN FILE
-    FILE *fp = fopen("students.txt", "w");
-    if(fp == NULL) {
-        printf("File error\n");
-        return 1;
     }
-    fprintf(fp, "Roll\t\tName\t\tMarks\n");
-    fprintf(fp, "-----------------------------------\n");
-    for(int i = 0; i < n; i++) {
-        fprintf(fp, "%d %s %.2f\n", s[i].id, s[i].name, s[i].marks);
+}
+// Add student 
+void addStudent()
+{
+    FILE *fp;
+    struct Student s[200];
+    int n = 0, add;
+
+    // READ EXISTING DATA
+    fp = fopen("students.txt", "r");
+
+    if(fp != NULL)
+    {
+        while(fscanf(fp, "%d %s %f",
+              &s[n].id,
+              s[n].name,
+              &s[n].marks) != EOF)
+        {
+            n++;
+        }
+        fclose(fp);
+    }
+
+    // ADD NEW STUDENTS
+    printf("How many students to add: ");
+    scanf("%d", &add);
+
+    for(int i = n; i < n + add; i++)
+    {
+        printf("Enter id: ");
+        scanf("%d", &s[i].id);
+
+        printf("Enter name: ");
+        scanf("%s", s[i].name);
+
+        printf("Enter marks: ");
+        scanf("%f", &s[i].marks);
+    }
+
+    n += add;
+
+    // SORT AFTER ADD
+    sortStudents(s, n);
+
+    // WRITE BACK
+    fp = fopen("students.txt", "w");
+
+    for(int i = 0; i < n; i++)
+    {
+        fprintf(fp, "%d %s %.2f\n",
+                s[i].id,
+                s[i].name,
+                s[i].marks);
+    }
+
+    fclose(fp);
+}
+//  Delete by name 
+void deleteByName()
+{
+    FILE *fp;
+    struct Student s[200];
+    int n = 0;
+    char name[100];
+
+    fp = fopen("students.txt", "r");
+
+    if(fp != NULL)
+    {
+        while(fscanf(fp, "%d %s %f",
+              &s[n].id,
+              s[n].name,
+              &s[n].marks) != EOF)
+        {
+            n++;
+        }
+        fclose(fp);
+    }
+
+    printf("Enter name to delete: ");
+    scanf("%s", name);
+
+    int j = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if(strcmp(s[i].name, name) != 0)
+        {
+            s[j++] = s[i];
+        }
+    }
+
+    n = j;
+
+    // SORT AGAIN (safe practice)
+    sortStudents(s, n);
+
+    fp = fopen("students.txt", "w");
+
+    for(int i = 0; i < n; i++)
+    {
+        fprintf(fp, "%d %s %.2f\n",
+                s[i].id,
+                s[i].name,
+                s[i].marks);
+    }
+
+    fclose(fp);
+}
+// Display student 
+void displayStudent()
+{
+    FILE *fp;
+    struct Student s[200];
+    int n = 0;
+
+    fp = fopen("students.txt", "r");
+
+    if(fp == NULL)
+{
+    printf("No file found\n");
+    return;
+}
+if(fp == NULL)
+{
+    printf("No file found\n");
+    return;
+}
+    while(fscanf(fp, "%d %s %f",
+          &s[n].id,
+          s[n].name,
+          &s[n].marks) != EOF)
+    {
+        n++;
     }
 
     fclose(fp);
 
-    printf("File sorted alphabetically by name.\n");
+    if(n == 0)
+    {
+        printf("No students found\n");
+        return;
+    }
 
-    return 0;
+    printf("\nID\tName\tMarks\n");
+    printf("----------------------\n");
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d\t%s\t%.2f\n",
+               s[i].id,
+               s[i].name,
+               s[i].marks);
+    }
+}
+void updateStudent()
+{
+    FILE *fp;
+    struct Student s[200];
+    int n = 0;
+    char name[100];
+    int found = 0;
+
+    // READ FILE
+    fp = fopen("students.txt", "r");
+
+    if(fp == NULL)
+    {
+        printf("File not found\n");
+        return;
+    }
+
+    while(fscanf(fp, "%d %s %f",
+          &s[n].id,
+          s[n].name,
+          &s[n].marks) != EOF)
+    {
+        n++;
+    }
+
+    fclose(fp);
+
+    // INPUT NAME TO UPDATE
+    printf("Enter name to update marks: ");
+    scanf("%s", name);
+
+    // FIND AND UPDATE
+    for(int i = 0; i < n; i++)
+    {
+        if(strcmp(s[i].name, name) == 0)
+        {
+            printf("Enter new marks: ");
+            scanf("%f", &s[i].marks);
+            found = 1;
+            break;
+        }
+    }
+
+    if(!found)
+    {
+        printf("Student not found\n");
+        return;
+    }
+
+    // WRITE BACK TO FILE
+    fp = fopen("students.txt", "w");
+
+    for(int i = 0; i < n; i++)
+    {
+        fprintf(fp, "%d %s %.2f\n",
+                s[i].id,
+                s[i].name,
+                s[i].marks);
+    }
+
+    fclose(fp);
+
+    printf("Marks updated successfully\n");
 }
