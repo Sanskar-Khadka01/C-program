@@ -8,8 +8,8 @@ struct Student {
 };
 
 int main() {
-    int n, i; 
     FILE *fp = fopen("students.txt", "w");
+    int n,i;
     printf("Enter number of student to store");
     scanf("%d",&n);
     struct Student s[n];
