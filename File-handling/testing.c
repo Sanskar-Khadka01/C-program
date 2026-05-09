@@ -6,6 +6,14 @@ struct Student {
     char name[100];
     float marks;
 };
+
+// prototypes
+void addStudent();
+void displayStudent();
+void updateStudent();
+void deleteByName();
+void sortStudents(struct Student s[], int n);
+
 int main()
 {
     FILE *fp;
@@ -101,7 +109,7 @@ void addStudent()
     fp = fopen("students.txt", "r");
 
     if(fp != NULL)
-    {
+    
         while(fscanf(fp, "%d %s %f",
               &s[n].id,
               s[n].name,
@@ -198,7 +206,7 @@ void deleteByName()
 
     fclose(fp);
 }
-// Display student 
+// Display student  
 void displayStudent()
 {
     FILE *fp;
@@ -208,15 +216,11 @@ void displayStudent()
     fp = fopen("students.txt", "r");
 
     if(fp == NULL)
-{
-    printf("No file found\n");
-    return;
-}
-if(fp == NULL)
-{
-    printf("No file found\n");
-    return;
-}
+    {
+      printf("No file found\n");
+      return;
+    }
+
     while(fscanf(fp, "%d %s %f",
           &s[n].id,
           s[n].name,
