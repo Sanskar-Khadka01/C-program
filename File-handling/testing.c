@@ -107,7 +107,7 @@ void addStudent()
 
     // READ EXISTING DATA
     fp = fopen("students.txt", "r");
-    {
+    if(fp!=NULL){
         fp = fopen("students.txt", "w");
         fclose(fp);
         fp = fopen("students.txt", "r");
@@ -116,7 +116,7 @@ void addStudent()
         while(fscanf(fp, "%d %s %f",
               &s[n].id,
               s[n].name,
-              &s[n].marks)= 3)
+              &s[n].marks)==3)
         {
             n++;
         }
@@ -171,7 +171,7 @@ void deleteByName()
         while(fscanf(fp, "%d %s %f",
               &s[n].id,
               s[n].name,
-              &s[n].marks) =3)
+              &s[n].marks) ==3)
         {
             n++;
         }
@@ -226,7 +226,7 @@ void displayStudent()
     while(fscanf(fp, "%d %s %f",
           &s[n].id,
           s[n].name,
-          &s[n].marks) = 3)
+          &s[n].marks) == 3)
     {
         n++;
     }
@@ -270,7 +270,7 @@ void updateStudent()
     while(fscanf(fp, "%d %s %f",
           &s[n].id,
           s[n].name,
-          &s[n].marks) = 3)
+          &s[n].marks) == 3)
     {
         n++;
     }
